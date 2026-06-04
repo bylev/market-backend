@@ -1,6 +1,7 @@
 package mx.edu.tecdesoftware.market_backend.persistence.entity;
 
 import jakarta.persistence.*;
+import java.util.List;
 
 @Entity
 @Table(name="categorias")
@@ -14,6 +15,9 @@ public class Categoria {
     private String descripcion;
 
     private boolean estado;
+
+    @OneToMany(mappedBy = "categoria")
+    private List<Producto> productos;
 
 // Getters and Setters
 
@@ -42,6 +46,11 @@ public class Categoria {
         this.estado = estado;
     }
 
+    public List<Producto> getProductos() {
+        return productos;
+    }
 
-
+    public void setProductos(List<Producto> productos) {
+        this.productos = productos;
+    }
 }
