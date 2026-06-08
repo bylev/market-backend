@@ -5,7 +5,7 @@ import mx.edu.tecdesoftware.market_backend.persistence.entity.Producto;
 import java.util.List;
 import java.util.Optional;
 
-public interface ProductoCrudRepository<Producto> extends CrudRepository<Producto, Integer> {
+public interface ProductoCrudRepository extends CrudRepository<Producto, Integer> {
 
     // Query Method
     /*
@@ -17,7 +17,7 @@ public interface ProductoCrudRepository<Producto> extends CrudRepository<Product
     // Obtener una lista de productos filtrados por id de categoria
     // y ordenarlos ascendentemente por nombre
 
-    List<Producto> findbyIdCategoriaOrderByNombreAsc(int idCategoria);
+    List<Producto> findByIdCategoriaOrderByNombreAsc(int idCategoria);
 
     // Obtener los productos escasos
     Optional<List<Producto>> findByCantidadStockLessThanAndEstado(int cantidad,boolean estado);
