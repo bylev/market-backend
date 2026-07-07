@@ -14,7 +14,7 @@ import java.util.Optional;
 
 @Repository
 public class ProductoRepository implements ProductRepository {
-    @Autowired
+    @Autowired // Inyección de dependencias
     private ProductoCrudRepository productoCrudRepository;
     @Autowired
     private ProductMapper productMapper;
