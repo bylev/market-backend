@@ -1,4 +1,4 @@
-package mx.edu.tecdesoftware.market_backend.persistence.web.controller;
+package mx.edu.tecdesoftware.market_backend.web.controller;
 
 import mx.edu.tecdesoftware.market_backend.domain.service.Product;
 import mx.edu.tecdesoftware.market_backend.domain.service.ProductService;
