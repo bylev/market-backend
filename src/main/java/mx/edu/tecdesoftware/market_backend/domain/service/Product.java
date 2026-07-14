@@ -4,6 +4,7 @@ public class Product {
     private int productId;
     private String name;
     private int categoryId;
+    private String barCode;
     private double price;
     private int stock;
     private boolean active;
@@ -32,6 +33,14 @@ public class Product {
 
     public void setCategoryId(int categoryId) {
         this.categoryId = categoryId;
+    }
+
+    public String getBarCode() {
+        return barCode;
+    }
+
+    public void setBarCode(String barCode) {
+        this.barCode = barCode;
     }
 
     public double getPrice() {
