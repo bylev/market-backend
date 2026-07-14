@@ -28,6 +28,7 @@ public interface PurchaseMapper {
     List<Purchase> toPurchases(List<Compra> compras);
 
     @InheritInverseConfiguration
+    @Mapping(target = "idCompra", ignore = true)
     @Mapping(target = "cliente", ignore = true)
     Compra toCompra(Purchase purchase);
 

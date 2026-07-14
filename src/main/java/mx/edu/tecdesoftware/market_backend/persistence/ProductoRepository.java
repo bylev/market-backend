@@ -56,7 +56,10 @@ public class ProductoRepository implements ProductRepository {
     @Override
     public Product save(Product product) {
         Producto producto = productMapper.toProducto(product);
-        return productMapper.toProduct(productoCrudRepository.save(producto));
+        Producto savedProduct = productoCrudRepository.save(producto);
+        return productoCrudRepository.findById(savedProduct.getIdProducto())
+                .map(productMapper::toProduct)
+                .orElseGet(() -> productMapper.toProduct(savedProduct));
     }
 
     //Elimina un producto
@@ -65,6 +68,5 @@ public class ProductoRepository implements ProductRepository {
         productoCrudRepository.deleteById(productId);
     }
 }
-
 
 
