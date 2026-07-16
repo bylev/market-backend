@@ -59,12 +59,12 @@ public class PurchaseController {
                             name = "Example purchase",
                             value = """
                                     {
-                                        "clientId": "1234567890",
+                                        "clientId": "4546221",
                                         "items": [
                                             {
-                                                "productId": 7,
+                                                "productId": 1,
                                                 "quantity": 2,
-                                                "total": 41.00,
+                                                "total": 600.00,
                                                 "active": true
                                             }
                                         ],
