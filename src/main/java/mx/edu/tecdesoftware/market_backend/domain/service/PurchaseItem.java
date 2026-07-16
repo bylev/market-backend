@@ -3,7 +3,7 @@ package mx.edu.tecdesoftware.market_backend.domain.service;
 public class PurchaseItem {
     private int productId;
     private int quantity;
-    private int total;
+    private double total;
     private boolean active;
 
     public int getProductId() {
@@ -22,11 +22,11 @@ public class PurchaseItem {
         this.quantity = quantity;
     }
 
-    public int getTotal() {
+    public double getTotal() {
         return total;
     }
 
-    public void setTotal(int total) {
+    public void setTotal(double total) {
         this.total = total;
     }
 

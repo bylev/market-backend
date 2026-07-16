@@ -64,7 +64,7 @@ public class PurchaseController {
                                             {
                                                 "productId": 7,
                                                 "quantity": 2,
-                                                "total": "41.00",
+                                                "total": 41.00,
                                                 "active": true
                                             }
                                         ],
